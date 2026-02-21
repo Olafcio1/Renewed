@@ -74,6 +74,7 @@ Blocks:
   - [ ] Diorite
   - [ ] Andesite
   - [ ] Tuff
+- [ ] Deepslate stone variants
 - [ ] Respawn Anchor ⛑
 - [ ] Trapped Chest 🌰
 - [ ] Non-carved Pumpkin 🥧
