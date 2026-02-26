@@ -47,7 +47,7 @@ Subcommands:
 - [ ] /time query
 
 Command aliases:
-- [ ] /teleport -> /tp
+- [x] /teleport -> /tp
 - [x] /experience -> /xp
 - [x] /whisper -> /tell
 
