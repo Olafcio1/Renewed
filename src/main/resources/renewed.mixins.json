@@ -24,6 +24,7 @@
     "enchantment.AquaAffinityEnchantmentMixin",
     "enchantment.BetterLootEnchantmentMixin",
     "enchantment.DamageEnchantmentMixin",
+    "enchantment.EfficiencyEnchantmentMixin",
     "enchantment.ProtectionEnchantmentMixin"
   ],
   "client": [
