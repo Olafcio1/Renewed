@@ -12,9 +12,12 @@ import org.spongepowered.asm.mixin.injection.Inject;
 import org.spongepowered.asm.mixin.injection.callback.CallbackInfo;
 import pl.olafcio.renewed.features.NewBlock;
 import pl.olafcio.renewed.mixin.accessors.IBlock;
+import pl.olafcio.renewed.mixininterface.Translatable;
 
 @Mixin(Block.class)
-public class BlockMixin {
+public abstract class BlockMixin
+       implements Translatable
+{
     @Shadow @Final public static Block[] BLOCKS;
     @Shadow @Final public static boolean[] field_495;
     @Shadow @Final public static int[] field_494;
@@ -42,4 +45,7 @@ public class BlockMixin {
             }
         }
     }
+
+    @Shadow
+    public abstract String getTranslationKey();
 }
