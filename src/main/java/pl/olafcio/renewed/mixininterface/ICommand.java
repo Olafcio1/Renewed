@@ -66,8 +66,8 @@ public interface ICommand {
             if (item == null)
                 break;
             else if (
-                    item.getTranslationKey() != null &&
-                    item.getTranslationKey().split("\\.")[1].toLowerCase().equals(name)
+                    item.getUseKey() != null &&
+                    item.getUseKey().split("\\.")[1].toLowerCase().equals(name)
             )
                 return item;
         }
