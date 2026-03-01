@@ -26,6 +26,7 @@
     "enchantment.DamageEnchantmentMixin",
     "enchantment.EfficiencyEnchantmentMixin",
     "enchantment.FireAspectEnchantmentMixin",
+    "enchantment.FlameEnchantmentMixin",
     "enchantment.ProtectionEnchantmentMixin"
   ],
   "client": [
