@@ -22,6 +22,7 @@
     "commands.registry.CommandManagerMixin",
     "commands.registry.CommandRegistryMixin",
     "enchantment.AquaAffinityEnchantmentMixin",
+    "enchantment.BetterLootEnchantmentMixin",
     "enchantment.DamageEnchantmentMixin",
     "enchantment.ProtectionEnchantmentMixin"
   ],
