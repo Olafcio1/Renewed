@@ -1,9 +1,6 @@
 package pl.olafcio.renewed.commands;
 
-import net.minecraft.command.AbstractCommand;
-import net.minecraft.command.CommandSource;
-import net.minecraft.command.IncorrectUsageException;
-import net.minecraft.command.SyntaxException;
+import net.minecraft.command.*;
 import net.minecraft.entity.player.ServerPlayerEntity;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
@@ -34,7 +31,7 @@ public class ClearCommand
         ServerPlayerEntity player = server.getPlayerManager().getPlayer(args[0]);
 
         if (player == null)
-            throw new SyntaxException("commands.clear.no_player");
+            throw new PlayerNotFoundException("commands.clear.no_player");
 
         if (args.length == 2) {
             Item item = getItem(args[1]);
