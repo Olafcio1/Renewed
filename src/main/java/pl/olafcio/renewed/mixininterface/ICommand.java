@@ -26,15 +26,15 @@ public interface ICommand {
     // =================================== //
 
     default Item getItem(String name) {
-        return (Item) access(name, "item", (Translatable[]) Item.ITEMS);
+        return (Item) access(name, "item", (Translatable[]) Item.ITEMS, 1);
     }
 
     default Block getBlock(String name) {
-        return (Block) access(name, "block", (Translatable[]) Block.BLOCKS);
+        return (Block) access(name, "block", (Translatable[]) Block.BLOCKS, 0);
     }
 
     default Enchantment getEnchantment(String name) {
-        return (Enchantment) access(name, "enchantment", (Translatable[]) Enchantment.ALL_ENCHANTMENTS);
+        return (Enchantment) access(name, "enchantment", (Translatable[]) Enchantment.ALL_ENCHANTMENTS, 0);
     }
 
     // ========= //
@@ -43,7 +43,7 @@ public interface ICommand {
 
     @NotNull
     @ApiStatus.Internal
-    static <T extends Translatable> T access(String name, String registryName, T[] registry) {
+    static <T extends Translatable> T access(String name, String registryName, T[] registry, int offset) {
         if (name.startsWith("+"))
             throw new InvalidNumberException("Invalid " + registryName + " ID");
 
@@ -61,10 +61,10 @@ public interface ICommand {
             throw new InvalidNumberException(StringUtil.capitalize(registryName) + " ID out of bounds");
         }
 
-        for (int i = 1; i < registry.length; i++) {
+        for (int i = offset; i < registry.length; i++) {
             T item = registry[i];
             if (item == null)
-                break;
+                continue;
             else if (
                     item.getUseKey() != null &&
                     item.getUseKey().split("\\.")[1].toLowerCase().equals(name)
