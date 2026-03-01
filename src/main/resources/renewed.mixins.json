@@ -32,7 +32,8 @@
     "enchantment.ProtectionEnchantmentMixin",
     "enchantment.PunchEnchantmentMixin",
     "enchantment.RespirationEnchantmentMixin",
-    "enchantment.SilkTouchEnchantmentMixin"
+    "enchantment.SilkTouchEnchantmentMixin",
+    "enchantment.UnbreakingEnchantmentMixin"
   ],
   "client": [
     "BlockRendererMixin",
