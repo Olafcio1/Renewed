@@ -28,6 +28,7 @@
     "enchantment.FireAspectEnchantmentMixin",
     "enchantment.FlameEnchantmentMixin",
     "enchantment.InfinityEnchantmentMixin",
+    "enchantment.PowerEnchantmentMixin",
     "enchantment.ProtectionEnchantmentMixin"
   ],
   "client": [
