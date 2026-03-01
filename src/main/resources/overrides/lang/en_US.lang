@@ -23,6 +23,13 @@ commands.detach.usage=/detach <player>
 commands.detach.success=Detached %1's connection.
 commands.detach.self_lan=Cannot detach an integrated connection!
 
+commands.enchant.usage=/enchant <enchantment> [<level>] [<player>]
+commands.enchant.no_player=Player not online
+commands.enchant.must_specify_player=Since you are not a player, you must specify the player target
+commands.enchant.success.other=Enchanted %s's %s with %s.
+commands.enchant.success.self=Enchanted your %s with %s.
+commands.enchant.cannot_enchant_air=Cannot enchant air
+
 item.monsterPlacer.name=Spawn Egg
 
 item.dyePowder.black.name=Ink Sac

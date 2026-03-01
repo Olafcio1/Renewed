@@ -24,5 +24,6 @@ public class CommandManagerMixin extends CommandRegistry {
         this.registerCommand(new SayCommand());
         this.registerCommand(new ClearCommand());
         this.registerCommand(new WeatherCommand());
+        this.registerCommand(new EnchantCommand());
     }
 }

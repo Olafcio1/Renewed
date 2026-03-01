@@ -37,6 +37,7 @@ Commands:
 - [ ] /datapack
 - [ ] /summon
 - [ ] /tag
+- [x] /enchant
 - [ ] /attribute
 - [ ] /spawnpoint
 - [ ] /setworldspawn
