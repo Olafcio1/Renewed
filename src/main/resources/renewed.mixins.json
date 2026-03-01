@@ -25,6 +25,7 @@
     "enchantment.BetterLootEnchantmentMixin",
     "enchantment.DamageEnchantmentMixin",
     "enchantment.EfficiencyEnchantmentMixin",
+    "enchantment.FireAspectEnchantmentMixin",
     "enchantment.ProtectionEnchantmentMixin"
   ],
   "client": [
