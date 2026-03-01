@@ -5,13 +5,11 @@
   "compatibilityLevel": "JAVA_8",
   "mixins": [
     "BlockMixin",
-    "DamageEnchantmentMixin",
     "EnchantmentMixin",
     "ItemMixin",
     "LanguageMixin",
     "MaterialMixin",
     "PlayerManagerMixin",
-    "ProtectionEnchantmentMixin",
     "SandBlockMixin",
     "ServerPlayerEntityMixin",
     "SpawnEggItemMixin",
@@ -22,7 +20,10 @@
     "commands.aliases.MessageCommandMixin",
     "commands.aliases.TeleportCommandMixin",
     "commands.registry.CommandManagerMixin",
-    "commands.registry.CommandRegistryMixin"
+    "commands.registry.CommandRegistryMixin",
+    "enchantment.AquaAffinityEnchantmentMixin",
+    "enchantment.DamageEnchantmentMixin",
+    "enchantment.ProtectionEnchantmentMixin"
   ],
   "client": [
     "BlockRendererMixin",
