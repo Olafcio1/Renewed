@@ -29,7 +29,8 @@
     "enchantment.FlameEnchantmentMixin",
     "enchantment.InfinityEnchantmentMixin",
     "enchantment.PowerEnchantmentMixin",
-    "enchantment.ProtectionEnchantmentMixin"
+    "enchantment.ProtectionEnchantmentMixin",
+    "enchantment.PunchEnchantmentMixin"
   ],
   "client": [
     "BlockRendererMixin",
