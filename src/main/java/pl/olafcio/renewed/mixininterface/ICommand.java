@@ -6,9 +6,25 @@ import net.minecraft.command.InvalidNumberException;
 import net.minecraft.command.SyntaxException;
 import net.minecraft.enchantment.Enchantment;
 import net.minecraft.item.Item;
+import org.jetbrains.annotations.ApiStatus;
 import org.jetbrains.annotations.NotNull;
 
 public interface ICommand {
+    // ========================== //
+    // INPUT TO JAVA TYPE PARSING //
+    // ========================== //
+
+    default int parseUnsignedInt(String value) {
+        if (value.startsWith("+"))
+            throw new InvalidNumberException("Expected an unsigned int");
+
+        return Integer.parseUnsignedInt(value);
+    }
+
+    // =================================== //
+    // INPUT TO MINECRAFT REGISTRY PARSING //
+    // =================================== //
+
     default Item getItem(String name) {
         return (Item) access(name, "item", (Translatable[]) Item.ITEMS);
     }
@@ -21,7 +37,12 @@ public interface ICommand {
         return (Enchantment) access(name, "enchantment", (Translatable[]) Enchantment.ALL_ENCHANTMENTS);
     }
 
+    // ========= //
+    // INTERNALS //
+    // ========= //
+
     @NotNull
+    @ApiStatus.Internal
     static <T extends Translatable> T access(String name, String registryName, T[] registry) {
         if (name.startsWith("+"))
             throw new InvalidNumberException("Invalid " + registryName + " ID");
