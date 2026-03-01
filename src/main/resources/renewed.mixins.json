@@ -30,7 +30,8 @@
     "enchantment.InfinityEnchantmentMixin",
     "enchantment.PowerEnchantmentMixin",
     "enchantment.ProtectionEnchantmentMixin",
-    "enchantment.PunchEnchantmentMixin"
+    "enchantment.PunchEnchantmentMixin",
+    "enchantment.RespirationEnchantmentMixin"
   ],
   "client": [
     "BlockRendererMixin",
